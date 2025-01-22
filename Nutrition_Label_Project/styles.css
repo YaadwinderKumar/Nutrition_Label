@@ -1,0 +1,88 @@
+.label {
+    border: 2px solid black;
+    width: 270px;
+    margin: 20px auto;
+    padding: 0 7px;
+    background-color: white;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.label:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Header Styling */
+header h1 {
+    text-align: center;
+    margin: -4px 0;
+    letter-spacing: 0.15px;
+    transition: color 0.3s ease;
+}
+
+header h1:hover {
+    color: #007bff;
+}
+
+/* Divider Animation */
+.divider {
+    border-bottom: 1px solid #888989;
+    margin: 2px 0;
+    transition: border-color 0.3s ease;
+}
+
+.divider:hover {
+    border-color: #007bff;
+}
+
+/* Calories Info Interactivity */
+.calories-info:hover {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out, transform 0.3s;
+    transform: translateY(-5px);
+}
+
+/* Tooltip Enhancements */
+.fat-info:hover::after,
+.daily-value p:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: -30px;
+    left: 10px;
+    padding: 8px;
+    background-color: #333;
+    color: white;
+    font-size: 0.75rem;
+    border-radius: 4px;
+    white-space: nowrap;
+    z-index: 10;
+    opacity: 0;
+    transform: translateY(5px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+}
+
+.fat-info:hover::after,
+.daily-value p:hover::after {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Scale Effect for Nutritional Values */
+.daily-value span {
+    transition: transform 0.3s, color 0.3s;
+}
+
+.daily-value span:hover {
+    transform: scale(1.1);
+    color: #007bff;
+}
+
+/* New Hover Glow for Nutritional Highlight */
+.daily-value p:hover {
+    background-color: rgba(0, 123, 255, 0.1);
+    border-radius: 4px;
+}
